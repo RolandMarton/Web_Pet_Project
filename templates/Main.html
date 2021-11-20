@@ -5,6 +5,63 @@
     <title>Main</title>
 </head>
 <body>
+    <div>
+        <h1>This is the beginning of everything!</h1>
+    </div>
+    <div>
+        <!-- Log in welcoming message -->
+        {% if user %}
+            <h1>Hello {{user}}!</h1>
+        {% else %}
+            <h1>Please log in with typing your name after "/" in the URl</h1>
+        {% endif %}
+    </div>
+    <div>
+        <p>What do you want to see today?</p>
+        <ul>
+            <li><a href="http://127.0.0.1:5000/Internal_link">Internal_Link_Flex</a></li>
+            <li><a href="http://127.0.0.1:5000/Extras">Wants to see some extras?</a></li>
+        </ul>
+    </div>
+    <div>
+        <h2>Testing zone</h2>
+        <h3>Forms</h3>
+        <div>
+            <p>#1 Name add</p>
+            <form action="#" method="post">
+                <p>Name:</p>
+                <p>
+                    <label>
+                        <input type="text" name = "text"/>
+                    </label>
+                </p>
+                    <label>
+                        <input type="submit" value="submit"/>
+                    </label>
+            </form>
+        </div>
+        <br>
+        <div>
+            <p>#2 Log in - POST METHOD</p>
+            <form action="#" method="post">
+                <label for="username"> Username: </label>
+                <input type="text" name="username" id="username" required>
 
+                <label for="password"> Password: </label>
+                <input type="password" name="password" id="password" required>
+
+                <input type="submit" value ="Log in">
+            </form>
+        </div>
+        <br>
+        <div>
+            <p>#3 Search box - GET METHOD</p>
+            <form action="#" method ="get">
+                <input type="text" name="author" id="author" value="author" required>
+                <input type="text" name="title" id="title" value="title "required>
+                <input type="submit" value="Search">
+            </form>
+        </div>
+    </div>
 </body>
 </html>
